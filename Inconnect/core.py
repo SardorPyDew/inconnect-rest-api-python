@@ -2,7 +2,7 @@ import logging
 import requests
 
 class PyInconnect:
-    API_URL = "http://127.0.0.1:8000/api/send_mail/"
+    API_URL = "https://api.inconnect.uz/api/rest-api/"
     
     def __init__(self, api_key):
         self.api_key = api_key
@@ -22,6 +22,7 @@ class PyInconnect:
     
     def __send_request(self, endpoint, method='POST', data=None, params=None):
         url = f"{self.API_URL}{endpoint}"
+        print(url)
         try:
             if method == "GET":
                 response = requests.get(url, headers=self.headers, params=params)

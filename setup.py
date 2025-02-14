@@ -15,7 +15,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="Inconnect",
+    name="inconnect",
     version=__version__,
     packages=find_packages(),
     
@@ -24,7 +24,7 @@ setup(
     description='A simple Inconnect REST client library and example for Python',
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/SardorPyDew/inconnect-rest-api-python",
+    url="https://github.com/radiants-uz/inconnect-rest-api-python",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

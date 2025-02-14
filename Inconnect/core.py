@@ -35,8 +35,8 @@ class PyInconnect:
             self.logger.error(f"Request failed: {e}")
             return {"error": str(e)}
 
-    def send_email(self, name, from_email, to_email, subject, message, password):
-        if not all([name, from_email, to_email, subject, message, password]):
+    def send_email(self, name, from_email, to_email, subject, message):
+        if not all([name, from_email, to_email, subject, message]):
             return {"error": "Missing required fields"}
 
         email_data = {
@@ -44,8 +44,7 @@ class PyInconnect:
             "from_email": from_email,
             "to_email": to_email,
             "subject": subject,
-            "message": message,
-            "password": password,
+            "message": message
         }
 
         return self.__send_request('send/', 'POST', email_data)

@@ -10,19 +10,17 @@ response = mail_client.send_email(
     from_email="john@example.com",
     to_email="recipient@example.com",
     subject="PyInconnect Email Test",
-    message="Bu PyInconnect yordamida yuborilgan oddiy email.",
-    password="your-email-password"  # Sendgrid yoki SMTP autentifikatsiya uchun
+    message="This is a simple email sent using PyInconnect"
 )
 
 # 2. Sending an email with HTML content (HTML as a message)
-html_content = "<h1>Salom!</h1><p>Bu HTML formatidagi email.</p>"
+html_content = "<h1>Hello!</h1><p>This is an email in HTML format.</p>"
 response = mail_client.send_email(
     name="John Doe",
     from_email="john@example.com",
     to_email="recipient@example.com",
     subject="HTML Email Test",
     message=html_content,  # HTML message
-    password="your-email-password"
 )
 
 # 3. Sending an email using a predefined template
@@ -32,8 +30,7 @@ response = mail_client.send_email_with_template(
     from_email="john@example.com",
     from_name="John Doe",
     to_email="recipient@example.com",
-    subject="Shablon Orqali Email",
+    subject="Email With Template",
     template_id=template_id,
     variables=variables
 )
-

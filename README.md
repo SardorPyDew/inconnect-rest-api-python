@@ -35,8 +35,7 @@ mail_client.send_email(
     from_email="john@example.com",
     to_email="recipient@example.com",
     subject="PyInconnect Email Test",
-    message="Bu PyInconnect yordamida yuborilgan oddiy email.",
-    password="your-email-password"  # Sendgrid yoki SMTP autentifikatsiya uchun
+    message="This is a simple email sent using PyInconnect."
 )
 
 print("✅ Email sent successfully!")
